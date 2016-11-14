@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://wwww.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Validate Form</title>
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+		<link rel="stylesheet" href="resources/css/main.css">
+	</head>
+	<body onload="loadForm()">
+		<div id="validate-form">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+			    	<h3 class="panel-title">Validate Form</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<div id="successAlert" class="alert alert-success" role="alert">Sucess!</div>
+						<div id="dangerAlert" class="alert alert-danger" role="alert">Invalid Data!</div>
+						<div class="form-group">
+							<label for="inputName">Name</label>
+							<input type="text" class="form-control" id="inputName" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<label for="inputEmail">Email</label>
+							<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="inputDateOfBirth">Date of Birth</label>
+							<input type="text" class="form-control" id="inputDateOfBirth" placeholder="Date of Birth" maxlength="10" onkeyup="dateMask(this)">
+						</div>
+						<div class="form-group">
+							<label for="inputIndividualRegistration">Individual Registration</label>
+							<input type="text" class="form-control" id="inputIndividualRegistration" placeholder="Individual Registration" maxlength="14" onkeyup="individualRegistrationMask(this)">
+						</div>
+						<button type="button" class="btn btn-primary" onclick="validateForm()">Validate</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="resources/js/validate.js"></script>
+	</body>
+</html>
